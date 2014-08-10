@@ -29,13 +29,14 @@ public class Book {
 			currentPageIndex++;
 		}
 	}
-
-	public String printCurrentPagePlainText() {
-		return pages.get(currentPageIndex);
-	}
 	
-	public String printCurrentPageHTML() {
-		return "<div class='page'>" + pages.get(currentPageIndex) + "</div>";
+	public String printCurrentPage(String displayType) {
+		if (displayType.equals("plainText")) {
+			return pages.get(currentPageIndex);
+		} else if (displayType.equals("html")) {
+			return "<div class='page'>" + pages.get(currentPageIndex) + "</div>";	
+		}
+		return "Unknown type";
 	}
 
 	public int getCurrentPage() {
