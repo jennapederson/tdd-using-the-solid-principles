@@ -10,15 +10,17 @@ public abstract class PrinterTest {
 
 	protected final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 	protected Printer printer;
+	private PrintStream oldOut;
 
 	@Before
 	public void before() {
+		oldOut = System.out;
 		System.setOut(new PrintStream(outContent));
 	}
 	
 	@After
 	public void after() {
-		System.setOut(null);
+		System.setOut(oldOut);
 	}
 
 }
