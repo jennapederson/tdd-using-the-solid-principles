@@ -1,4 +1,4 @@
-package single_responsibility.before;
+package single_responsibility.after;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,14 +28,6 @@ public class Book {
 		if (currentPageIndex < pages.size() - 1) {
 			currentPageIndex++;
 		}
-	}
-
-	public void printCurrentPagePlainText() {
-		System.out.println(pages.get(currentPageIndex));
-	}
-	
-	public void printCurrentPageHTML() {
-		System.out.println("<div class='page'>" + pages.get(currentPageIndex) + "</div>");
 	}
 
 	public int getCurrentPage() {
