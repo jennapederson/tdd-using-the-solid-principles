@@ -8,7 +8,7 @@ public class Book {
 	private String title;
 	private String author;
 	private List<String> pages;
-	private int currentPage = 0;
+	private int currentPageIndex = 0;
 	
 	public Book(String title, String author, ArrayList<String> pages) {
 		this.title = title;
@@ -25,16 +25,16 @@ public class Book {
 	}
 	
 	public void turnPage() {
-		if (currentPage < pages.size() - 1) {
-			currentPage++;
+		if (currentPageIndex < pages.size() - 1) {
+			currentPageIndex++;
 		}
 	}
 
 	public void printCurrentPage() {
-		System.out.println(pages.get(currentPage));
+		System.out.println(pages.get(currentPageIndex));
 	}
 
 	public int getCurrentPage() {
-		return currentPage;
+		return currentPageIndex + 1;
 	}
 }

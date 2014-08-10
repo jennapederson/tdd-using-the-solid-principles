@@ -20,15 +20,15 @@ public class BookTest {
 		
 		assertThat(book.getTitle(), is("Where the Red Fern Grows"));
 		assertThat(book.getAuthor(), is("Wilson Rawls"));
-		assertThat(book.getCurrentPage(), is(0));
-		book.turnPage();
 		assertThat(book.getCurrentPage(), is(1));
 		book.turnPage();
 		assertThat(book.getCurrentPage(), is(2));
 		book.turnPage();
 		assertThat(book.getCurrentPage(), is(3));
 		book.turnPage();
-		assertThat(book.getCurrentPage(), is(3));
+		assertThat(book.getCurrentPage(), is(4));
+		book.turnPage();
+		assertThat(book.getCurrentPage(), is(4));
 		
 		book.printCurrentPage();
 	}
