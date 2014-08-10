@@ -1,4 +1,4 @@
-package single_responsibility.before;
+package singleResponsibility.before;
 
 import java.util.ArrayList;
 import java.util.List;

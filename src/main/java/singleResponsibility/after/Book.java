@@ -1,4 +1,4 @@
-package single_responsibility.after;
+package singleResponsibility.after;
 
 import java.util.ArrayList;
 import java.util.List;

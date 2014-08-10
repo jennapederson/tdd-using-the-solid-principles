@@ -1,4 +1,4 @@
-package single_responsibility.after;
+package singleResponsibility.after;
 
 public class PlainTextPrinter implements Printer {
 

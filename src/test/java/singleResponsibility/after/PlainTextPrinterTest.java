@@ -1,4 +1,4 @@
-package single_responsibility.after;
+package singleResponsibility.after;
 
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;

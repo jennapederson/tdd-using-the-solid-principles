@@ -1,4 +1,4 @@
-package single_responsibility.before;
+package singleResponsibility.before;
 
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
