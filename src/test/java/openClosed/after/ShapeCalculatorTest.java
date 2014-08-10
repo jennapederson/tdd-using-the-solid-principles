@@ -24,5 +24,15 @@ public class ShapeCalculatorTest {
 		ShapeCalculator calculator = new ShapeCalculator();
 		assertThat(calculator.calculateArea(new Triangle(5, 7)), is(17.5));
 	}
+	
+	@Test
+	public void testAreaOfSomeNewThing() {
+		ShapeCalculator calculator = new ShapeCalculator();
+		assertThat(calculator.calculateArea(new Shape() {
+			public double area() {
+				return 10;
+			}
+		}), is(10.0));
+	}
 
 }

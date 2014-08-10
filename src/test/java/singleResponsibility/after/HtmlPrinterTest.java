@@ -5,13 +5,12 @@ import static org.junit.Assert.assertThat;
 
 import org.junit.Test;
 
-public class HtmlPrinterTest extends PrinterTest {
+public class HtmlPrinterTest {
 	
 	@Test
 	public void testPrint() {
-		printer = new HtmlPrinter();
-		printer.printPage("A page to be printed in HTML");
-		assertThat(outContent.toString(), is("<div class='page'>A page to be printed in HTML</div>\n"));
+		Printer printer = new HtmlPrinter();
+		assertThat(printer.printPage("A page to be printed in HTML"), is("<div class='page'>A page to be printed in HTML</div>"));
 	}
 
 }

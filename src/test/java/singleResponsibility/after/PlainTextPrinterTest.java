@@ -5,13 +5,12 @@ import static org.junit.Assert.assertThat;
 
 import org.junit.Test;
 
-public class PlainTextPrinterTest extends PrinterTest {
+public class PlainTextPrinterTest {
 	
 	@Test
 	public void testPrint() {
-		printer = new PlainTextPrinter();
-		printer.printPage("A page to be printed in plain text");
-		assertThat(outContent.toString(), is("A page to be printed in plain text\n"));
+		Printer printer = new PlainTextPrinter();
+		assertThat(printer.printPage("A page to be printed in plain text"), is("A page to be printed in plain text"));
 	}
 
 }

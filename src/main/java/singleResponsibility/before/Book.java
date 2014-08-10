@@ -30,12 +30,12 @@ public class Book {
 		}
 	}
 
-	public void printCurrentPagePlainText() {
-		System.out.println(pages.get(currentPageIndex));
+	public String printCurrentPagePlainText() {
+		return pages.get(currentPageIndex);
 	}
 	
-	public void printCurrentPageHTML() {
-		System.out.println("<div class='page'>" + pages.get(currentPageIndex) + "</div>");
+	public String printCurrentPageHTML() {
+		return "<div class='page'>" + pages.get(currentPageIndex) + "</div>";
 	}
 
 	public int getCurrentPage() {

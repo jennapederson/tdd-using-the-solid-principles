@@ -29,6 +29,9 @@ public class BookTest {
 		assertThat(book.getCurrentPage(), is(4));
 		book.turnPage();
 		assertThat(book.getCurrentPage(), is(4));
+		
+		assertThat(book.printCurrentPageHTML(), is("<div class='page'>Page 4 content</div>"));
+		assertThat(book.printCurrentPagePlainText(), is("Page 4 content"));
 	}
 
 }
