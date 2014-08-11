@@ -1,32 +1,35 @@
 package openClosed.after;
 
 import static org.hamcrest.Matchers.is;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertThat;
+import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.verify;
 
+import org.junit.Before;
 import org.junit.Test;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 
 public class ShapeCalculatorTest {
 	
-	@Test
-	public void testAreaOfCircle() {
-		ShapeCalculator calculator = new ShapeCalculator();
-		assertThat(calculator.calculateArea(new Circle(5)), is(78.53981633974483));
+	@Mock
+	Shape shape;
+	
+	@Before
+	public void before() {
+		MockitoAnnotations.initMocks(this);
 	}
 	
 	@Test
-	public void testAreaOfRectangle() {
+	public void testAreaOfSomeMock() {
 		ShapeCalculator calculator = new ShapeCalculator();
-		assertThat(calculator.calculateArea(new Rectangle(5, 7)), is(35.0));
-	}
-
-	@Test
-	public void testAreaOfTriangle() {
-		ShapeCalculator calculator = new ShapeCalculator();
-		assertThat(calculator.calculateArea(new Triangle(5, 7)), is(17.5));
+		when(shape.area()).thenReturn(10.0);
+		assertThat(calculator.calculateArea(shape), is(10.0));
+		verify(shape).area();
 	}
 	
 	@Test
-	public void testAreaOfSomeNewThing() {
+	public void testAreaOfSomeDerivedShape() {
 		ShapeCalculator calculator = new ShapeCalculator();
 		assertThat(calculator.calculateArea(new Shape() {
 			public double area() {
