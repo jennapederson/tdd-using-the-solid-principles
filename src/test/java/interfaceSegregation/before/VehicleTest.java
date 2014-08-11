@@ -15,9 +15,9 @@ public class VehicleTest {
 	}
 
 	@Test
-	public void testOldBeaterCannotChangeGears() {
+	public void testOldBeaterCanChangeGears() {
 		Vehicle oldBeater = new OldBeaterAutomaticTransmission();
 		oldBeater.changeGear(4);
-		assertThat(oldBeater.getGear(), is(1));
+		assertThat(oldBeater.getGear(), is(4));
 	}
 }
